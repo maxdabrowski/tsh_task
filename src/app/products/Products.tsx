@@ -1,13 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import LoaderBackground from 'shared/components/LoaderBackground/LoaderBackground';
+import { Header } from './header/Header';
+import { ProductsList } from './ProductsList/ProductsList/ProductsList';
+import { useProducts } from './useProducts';
 
-import { AppRoute } from 'routing/AppRoute.enum';
+export const Products:React.FC = () => {
 
-export const Products = () => {
+  const { searchParam, active, promo, dataLoading, products, productsMeta, page, searchParamsChangeHandle,pageChangeHandle} = useProducts();
   return (
-    <>
-      <h2>Products page</h2>
-      <Link to={AppRoute.Login}> Login </Link>
+    <> 
+      <Header searchParam ={searchParam} active={ active} promo={promo} inputsHandle={searchParamsChangeHandle} />
+      {dataLoading?
+        <LoaderBackground/>
+      :
+        <ProductsList products= {products} page={page} productsMeta = {productsMeta} pageHandle ={pageChangeHandle}/>
+      }
+
     </>
   );
 };

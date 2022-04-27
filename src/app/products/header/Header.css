@@ -1,0 +1,165 @@
+.header_products{
+  height: 144px;
+  background: #FFFFFF;
+  display: flex;
+}
+
+.header_tittle p {
+  width: 103px;
+  height: 40px;
+  margin-left: 108px;
+  margin-top: 52px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
+  color: #1A1B1D;
+}
+
+.header_form{
+  margin-left: 108px;
+  margin-top: 48px;
+  display: flex;
+}
+
+.header_form_checkbox_section{
+  display: flex;
+}
+.header_form_checkbox{
+  margin: 12px;
+}
+
+.header_form_checkbox label{
+  position: relative;
+  top: 2px;
+  left: 15px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 20px;
+}
+
+.header_input_icon{
+  position: relative;
+  top: 6px;
+  left: -32px;
+  z-index: 10;
+  width: 10px;
+  right: 0;
+  color: #1A1B1D;
+  font-size: 20px;
+}
+  
+.header_login{
+  position: absolute;
+  top: 53px;
+  right: 108px;
+}
+
+.avatar{
+  border-radius: 50%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 20px;
+  background-color: #FFFFFF;;
+  min-width: 184px;
+  box-shadow: 0px 8px 32px rgba(17, 18, 20, 0.158514);
+  border-radius: 4px;
+  padding: 12px 16px;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1A1B1D;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer;
+}
+
+@media only screen and (max-device-width:425px) {
+  .header_products{
+    display: block;
+    height: 208px;
+  }
+
+  .header_login{
+    position: absolute;
+    top: 48px;
+    right: 24px;
+  }
+
+  .header_tittle p {
+    margin-left: 24px;
+    margin-top: 52px;
+  }
+  
+  .header_form{
+    margin-left: 24px;
+    margin-top: 28px;
+    display: block;
+  }
+
+  .header_input{
+    width: calc(100% - 24px)!important;
+  }
+
+  .header_form_checkbox{
+    margin:32px 20px 32px 0px 
+  }
+
+}
+
+@media only screen and (max-width:768px) and (min-width:426px) {
+  .header_tittle p {
+    margin-left: 27px;
+  }
+
+  .header_login{
+    right: 27px;
+  }
+  
+  .header_form{
+    margin-left: 27px;
+  }
+
+  .header_input{
+    width: 200px !important;
+  }
+
+  .header_form_checkbox label{
+    left: 7px !important;
+    margin-right: 10px !important;
+  }
+
+  .header_form_checkbox{
+    margin-left:0px
+  }
+   
+}
+
+@media only screen and (max-width:1024px) and (min-width:769px){
+  .header_tittle p {
+    margin-left: 54px;
+  }
+
+  .header_login{
+    right: 54px;
+  }
+  
+  .header_form{
+    margin-left: 54px;
+  }
+}
